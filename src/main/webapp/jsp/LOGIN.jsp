@@ -44,7 +44,7 @@
     <div class="col-lg-4"></div>
     <div class="col-md-4">
         <div class="jumbotron" style="padding-top: 20px;">
-            <form method="POST" action="LoginAction.jsp">
+            <form method="POST" action="Actionjsp/LoginAction.jsp">
                 <h3 style="text-align: center;">로그인화면</h3>
                 <div class="form-group">
                     <input type="text" class = "form-control" placeholder="아이디" name =  "userID" maxlength="20">

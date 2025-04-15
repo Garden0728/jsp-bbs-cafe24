@@ -3,7 +3,9 @@
 <h2>JSP 게시판 웹 사이트!</h2>
 </body>
     <script>
-        location.href = "LOGIN.jsp";
+       location.href = "<%= request.getContextPath() %>/jsp/main.jsp";
+
+
 
     </script>
 
