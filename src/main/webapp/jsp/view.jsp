@@ -1,38 +1,35 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ page import="bbs.BbsDAO" %>
 <%@ page import="bbs.Bbs" %>
-<%@ page import="java.util.ArrayList" %>
-
-
+<%@ page import="bbs.BbsDAO" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JSP 게시판 웹 사이트</title>
-    <STYLE TYPE="text/css">
-        a, a:hover {
-            color: #000000;
-            text-decoration: none;
 
-        }
-    </STYLE>
     <!-- Bootstrap 전체 스타일 불러오기 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-<!--parameter는 정수형으로 바꿔주는 parseInt 함수 이용해서 바꿔줘여한다. -->
 <%
     String userID = null;
     if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-
-    int pageNumber = 1;
-    if (request.getParameter("pageNumber") != null) {
-        pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+    int bbsID = 0;
+    if (request.getParameter("bbsID") != null) {
+        bbsID = Integer.parseInt(request.getParameter("bbsID"));
     }
+    if (bbsID == 0) {
+        PrintWriter script = response.getWriter();
+        script.println("<script>");
+        script.println("alert('유효하지 않은 글입니다.');");
+        script.println("location.href = '../LOGIN.jsp'");
+        script.println("</script>");
+    }
+    Bbs bbs = new BbsDAO().getBbs(bbsID);
 %>
 
 <nav class="navbar navbar-default">
@@ -88,53 +85,66 @@
 </nav>
 <div class="container">
     <div class="row">
+
+
         <table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
             <!-- 게시판의 글 목록들이 홀수와 짝수가 서로 번갈아 가면서  색상이 변경 되도록 디자인 해주는 요소중 하나-->
             <thead>
-            <!-- thead는 테이블에 제목이라고 보면 됌. tr은 테이블의 하나의 행을 말함-->
+            <!-- thead는 테이블에 제목이라고 보면 됌. tr은 테이블의 하나의 행을 말함
+                colspan="2" 총 두개 만큼의 열을 잡아 먹도록 작성 한다.-->
+
             <tr>
-                <th style="background-color: #eeeeee; text-align: center;">번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">제목</th>
-                <th style="background-color: #eeeeee; text-align: center;">작성자</th>
-                <th style="background-color: #eeeeee; text-align: center;">작성일</th>
+                <th colspan="3" style="background-color: #eeeeee; text-align: center;">게시판 글 보기</th>
 
 
             </tr>
 
             </thead>
             <tbody>
-            <%
-                BbsDAO bbsDAO = new BbsDAO();
-                ArrayList<Bbs> list = bbsDAO.getList(pageNumber);
-                for (int i = 0; i < list.size(); i++) {
-            %>
+            <%--            <tr>--%>
+            <%--                <td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50"></td>--%>
+            <%--            </tr>--%>
             <tr>
-                <td><%=list.get(i).getBbsID() %></td>
-               <td><a href="view.jsp?bbsID=<%= list.get(i).getBbsID() %>"><%= list.get(i).getBbsTitle().replaceAll(" ","&nbsp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll("\n","<br>") %></a></td>
-
-                <td><%=list.get(i).getUserID() %></td>
-                <td><%=list.get(i).getBbsDate().substring(0,11)+list.get(i).getBbsDate().substring(11,13) + "시" + list.get(i).getBbsDate().substring(14,16) + "분"%></td>
+                <td style="width: 20%;">글제목</td>
+                <td colspan="2"><%= bbs.getBbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>")%>
+                </td>
             </tr>
-            <%
-                }
-            %>
+            <tr>
+                <td>작성자</td>
+                <td colspan="2"><%= bbs.getUserID()%>
+                </td>
+
+            </tr>
+            <tr>
+                <td>작성날짜</td>
+                <td colspan="2"><%= bbs.getBbsDate().substring(0, 11) + bbs.getBbsDate().substring(11, 13) + "시" + bbs.getBbsDate().substring(14, 16) + "분"%>
+                </td>
+
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td colspan="2"
+                    style="min-height: 200px;text-align: left"><%= bbs.getBbsContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>")%>
+                </td>
+            </tr>
+
 
             </tbody>
+
         </table>
+        <a href="bbs.jsp" class="btn btn-primary">목록</a>
         <%
-            if(pageNumber != 1){
+            if (userID != null && userID.equals(bbs.getUserID())) {
         %>
-            <a href="bbs.jsp?pageNumber=<%=pageNumber -1%>" class="btn btn-success btn-arraw-left">이전</a>
+
+        <a href="update.jsp?bbsID=<%= bbsID%>" class="btn btn=primary">수정</a>
+        <a onclick="return confirm('정말로 삭제하시겠습니까?')" href="Actionjsp/deleteAction.jsp?bbsID=<%= bbsID%>" class="btn btn=primary">삭제</a>
         <%
             }
-            if(bbsDAO.nextPage(pageNumber + 1)){
         %>
-            <a href="bbs.jsp?pageNumber=<%=pageNumber + 1%>" class="btn btn-success btn-arraw-left">다음</a>
-        <%
-             }
-        %>
-        <a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+        <%--  <input type="submit" class="btn btn-primary pull-right" value="글쓰기">--%>
     </div>
+
 
 </div>
 
