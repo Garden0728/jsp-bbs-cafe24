@@ -23,14 +23,16 @@
         userID = (String) session.getAttribute("userID");
 
     }
-    if(userID == null){
+    if(userID != null){
+        System.out.println(userID);
          PrintWriter script = response.getWriter();
          script.println("<script>");
         script.println("alert('이미 로그인이 되어있쇼');");
         script.println("location.href = '../main.jsp'");
         script.println("</script>");
     }
-    if (user.getUserID() == null || user.getUserPassword() == null || user.getUserName() == null
+
+    else if (user.getUserID() == null || user.getUserPassword() == null || user.getUserName() == null
             || user.getGENDER() == null || user.getUserEmail() == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");

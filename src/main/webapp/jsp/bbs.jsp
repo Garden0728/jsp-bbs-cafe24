@@ -20,6 +20,7 @@
     </STYLE>
     <!-- Bootstrap 전체 스타일 불러오기 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 <!--parameter는 정수형으로 바꿔주는 parseInt 함수 이용해서 바꿔줘여한다. -->

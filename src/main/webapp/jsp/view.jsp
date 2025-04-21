@@ -11,6 +11,7 @@
 
     <!-- Bootstrap 전체 스타일 불러오기 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 <%

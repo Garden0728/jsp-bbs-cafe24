@@ -11,9 +11,9 @@
         <properties>
             <!-- JDBC 설정 -->
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bbs?serverTimezone=UTC"/>
-            <property name="jakarta.persistence.jdbc.user" value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="0000"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost/moving0909"/>
+            <property name="jakarta.persistence.jdbc.user" value="moving0909"/>
+            <property name="jakarta.persistence.jdbc.password" value="wjddnjs123@"/>
 
             <!-- Hibernate 설정 -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
