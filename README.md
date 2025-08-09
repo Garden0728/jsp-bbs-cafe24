@@ -64,3 +64,20 @@ jspstudy/
 │       ├── web.xml
 │       └── lib/
 ├── pom.xml
+
+
+## 📸 스크린샷
+
+| 메인화면 | 회원가입 | 로그인 |
+|---|---|---|
+| ![메인화면](<img width="964" height="1002" alt="image" src="https://github.com/user-attachments/assets/da3e4d01-07ae-4340-b50a-2a39fa8b6527" />
+) | ![회원가입](<img width="932" height="651" alt="스크린샷 2025-08-09 194551" src="https://github.com/user-attachments/assets/ae3330f9-ae38-4f51-93b0-6b1bb926553e" />
+) | ![로그인](<img width="936" height="463" alt="스크린샷 2025-08-09 194545" src="https://github.com/user-attachments/assets/bb061fb5-74e0-49ac-a7b6-bb036a337680" />
+) |
+
+| 게시판 목록 | 게시글 상세보기 | 게시글 작성 |
+|---|---|---|
+| ![게시판 목록](<img width="926" height="456" alt="스크린샷 2025-08-09 194636" src="https://github.com/user-attachments/assets/e665f80d-bf34-42b0-a649-6db87e599ec1" />
+) | ![게시글 상세보기](<img width="1919" height="682" alt="스크린샷 2025-08-09 012914" src="https://github.com/user-attachments/assets/cf41b6d2-997b-47b5-acb5-b1387135bef1" />
+) | ![게시글 작성](<img width="932" height="651" alt="스크린샷 2025-08-09 194551" src="https://github.com/user-attachments/assets/8496edf3-7f56-477a-8390-b7c66150bbba" />
+) |
