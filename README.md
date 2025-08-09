@@ -66,6 +66,8 @@ jspstudy/
 ├── pom.xml
 
 
+```
+
 ## 📸 스크린샷
 
 
@@ -76,4 +78,6 @@ jspstudy/
 | 게시판 목록 | 게시글 상세보기 | 게시글 작성 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/7e550dea-45b3-4226-9e90-22b09dc38468" width="300"/> | <img src="https://github.com/user-attachments/assets/5b07c0ad-d9ba-4dc6-a3e7-46f494e2ac2a" width="300"/> | <img src="https://github.com/user-attachments/assets/ebf85906-e94d-43a5-8914-c29b346ff21d" width="300"/> |
+
+
 
