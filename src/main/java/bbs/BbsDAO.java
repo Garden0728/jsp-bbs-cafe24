@@ -3,19 +3,16 @@ package bbs;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.NoResultException;
-import jakarta.persistence.Persistence;
 import jakarta.persistence.Query;
-import jakarta.persistence.TypedQuery;
-import user.User;
+import util.JpaUtil;
 
-import java.lang.reflect.Member;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Optional;
 
 public class BbsDAO {
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("Mn");
+   private EntityManagerFactory emf = JpaUtil.getEntityManagerFactory();
+
 
 
     public String getBbsDate() {

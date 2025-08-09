@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0db2d21e-2822-4c61-a24f-baecde1cf3bb" name="cafe24" url="http://moving0909.cafe24.com">
+        <fileTransfer rootFolder="/moving0909/tomcat/webapps" accessType="SFTP" host="moving0909.cafe24.com" port="22" sshConfigId="2076c214-7372-4935-9f1d-8529736cbae8" sshConfig="moving0909@moving0909.cafe24.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
