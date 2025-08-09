@@ -71,13 +71,9 @@ jspstudy/
 
 | 메인화면 | 회원가입 | 로그인 |
 |---|---|---|
-| ![메인화면](<img width="1885" height="1023" alt="스크린샷 2025-08-09 012832" src="https://github.com/user-attachments/assets/2752edee-a0bb-447f-b573-10c38228af81" />
-) | ![회원가입](<img width="932" height="651" alt="스크린샷 2025-08-09 194551" src="https://github.com/user-attachments/assets/e5f7ee59-8322-4102-b756-8aeb86c4c36a" />
-) | ![로그인](<img width="936" height="463" alt="스크린샷 2025-08-09 194545" src="https://github.com/user-attachments/assets/b4f4310c-3e28-4a30-83c0-4dca10f78396" />
-) |
+| <img src="https://github.com/user-attachments/assets/2752edee-a0bb-447f-b573-10c38228af81" width="300"/> | <img src="https://github.com/user-attachments/assets/e5f7ee59-8322-4102-b756-8aeb86c4c36a" width="300"/> | <img src="https://github.com/user-attachments/assets/b4f4310c-3e28-4a30-83c0-4dca10f78396" width="300"/> |
 
 | 게시판 목록 | 게시글 상세보기 | 게시글 작성 |
 |---|---|---|
-| ![게시판 목록](<img width="926" height="456" alt="스크린샷 2025-08-09 194636" src="https://github.com/user-attachments/assets/7e550dea-45b3-4226-9e90-22b09dc38468" />)
-| ![게시글 상세보기](<img width="1919" height="682" alt="스크린샷 2025-08-09 012914" src="https://github.com/user-attachments/assets/5b07c0ad-d9ba-4dc6-a3e7-46f494e2ac2a" />)
-| ![게시글 작성](<img width="940" height="715" alt="스크린샷 2025-08-09 194646" src="https://github.com/user-attachments/assets/ebf85906-e94d-43a5-8914-c29b346ff21d" />) |
+| <img src="https://github.com/user-attachments/assets/7e550dea-45b3-4226-9e90-22b09dc38468" width="300"/> | <img src="https://github.com/user-attachments/assets/5b07c0ad-d9ba-4dc6-a3e7-46f494e2ac2a" width="300"/> | <img src="https://github.com/user-attachments/assets/ebf85906-e94d-43a5-8914-c29b346ff21d" width="300"/> |
+
