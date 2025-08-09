@@ -40,7 +40,7 @@ jspstudy/
 ├── src/
 │   └── main/
 │       └── java/
-│           └── … (Controller, DAO, Entity 등)
+│           └── … (Controller, DAO, Entity,security등)
 ├── webapp/
 │   ├── jsp/
 │   │   ├── main.jsp
