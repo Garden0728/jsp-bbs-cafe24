@@ -40,7 +40,7 @@
 | **ORM**      | JPA (Hibernate)                      |
 | **Security** | BCrypt (비밀번호 암호화)              |
 | **IDE**      | IntelliJ IDEA                        |
-| **Build**    | Maven *(선택사항)*                   |
+| **Build**    | Maven                                |
 
 ---
 
